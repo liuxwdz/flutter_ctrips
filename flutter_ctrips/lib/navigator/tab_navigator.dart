@@ -32,6 +32,7 @@ class _TabNavigatorWidgetState extends State<TabNavigatorWidget> {
   Widget _getWidget(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: [HomePage(), SearchPage(), LvPaPage(), MyPage()],
       ),
